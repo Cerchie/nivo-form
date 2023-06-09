@@ -3,7 +3,7 @@
 // install (please try to align the version of installed @nivo packages)
 // yarn add @nivo/bump
 import dynamic from "next/dynamic";
-
+import data from './data.json'
 const ResponsiveAreaBump = dynamic(() => import("@nivo/bump").then(m => m.ResponsiveAreaBump), { ssr: false });
 
 // make sure parent container have a defined height when using
@@ -11,7 +11,7 @@ const ResponsiveAreaBump = dynamic(() => import("@nivo/bump").then(m => m.Respon
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const Bump = ({ data /* see data tab */ }) => (
+const Bump = ({ data:any /* see data tab */ }) => (
     <ResponsiveAreaBump
         data={data}
         margin={{ top: 40, right: 100, bottom: 40, left: 100 }}
